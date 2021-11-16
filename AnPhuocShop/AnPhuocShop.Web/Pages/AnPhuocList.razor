@@ -1,0 +1,28 @@
+﻿@page "/"
+@inherits AnPhuocListBase
+    <div id="slider">
+        <figure>
+            <img src="slide1.png" />
+            <img src="slide2.png" />
+            <img src="slide3.jpg" />
+            <img src="slide4.png" />
+        </figure>
+    </div>
+    <div class="sp">
+        <input type="checkbox" id="showFooter" @bind="ShowFooter" />
+        <label for="showFooter">ShowFooter</label>
+        <a href="/editanphuoc" class="btn btn-primary">Thêm sản phẩm</a>
+        <div class="card-deck">
+            @foreach (var anphuoc in AnPhuocs)
+            {
+                <HienthiSanpham AnPhuoc="anphuoc" ShowFooter="ShowFooter"></HienthiSanpham>
+            }
+        </div>
+    </div>
+    <br />
+    <br />
+    <div style="display:block ;text-align:center">
+        <iframe width="1000" height="600" src="https://www.youtube-nocookie.com/embed/p5IRtJB-rJI?controls=0"
+                title="YouTube video player" frameborder="0" allow="accelerometer;
+                autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
